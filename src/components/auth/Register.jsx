@@ -219,7 +219,7 @@ function SignUp() {
           </button>
         </form>
 
-        {/* I made a Link in below to sign-in page */}
+        {/* I made a Link in below to sign-in page **/}
         <div className="login-link">
           <p>Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
         </div>
