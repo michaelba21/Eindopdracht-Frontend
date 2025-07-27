@@ -11,20 +11,20 @@
 .auth-card {
   background-color: var(--color-white);  
   border-radius: var(--border-radius);   
-  box-shadow: var(--shadow-lg);          /* This code will set a large shadow effect */
-  padding: 2rem;                         /* This will carry out a inner spacing and "1rem=16px"*/
+  box-shadow: var(--shadow-lg);     /* This code will set a large shadow effect */
+  padding: 2rem;                    /* This will carry out a inner spacing and "1rem=16px"*/
   width: 100%;                          
-  max-width: 400px;                      /* this shows a max card width */
+  max-width: 399px;          /* this shows a max card width */
 }
 
 .auth-card h2 {
-  color: var(--color-text);             /* This illustrate the heading text color.  */
+  color: var(--color-text);      /* This illustrate the heading text color.  */
   margin-bottom: 1.51rem;            
   text-align: center;                   
 }
 
 .form-group {
-  margin-bottom: 1rem;                 /* here I have tried to adds vertical spacing between form fields */
+  margin-bottom: 1rem;    /* here I have tried to adds vertical spacing between form fields */
 }
 
 .form-group label {
@@ -56,7 +56,7 @@
   font-weight: 600;                     
   border-radius: var(--border-radius); 
   cursor: pointer;                    
-  transition: all 0.2s ease;           /* This animate button character changes smoothly for a better UX view */
+  transition: all 0.2s ease;  /* This animate button character changes smoothly for a better UX view */
 }
 
 .btn-primary {
@@ -122,6 +122,6 @@
 
 @media (max-width: 480px) {
   .auth-card {
-    padding: 1.5rem;                        /* This will helps a tighter padding on small screens */
+    padding: 1.5rem;/* This will helps a tighter padding on small screens */
   }
 }
