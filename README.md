@@ -55,7 +55,7 @@ Samenvattend betreft het een geavanceerd en toegankelijk instrument dat gezondhe
 | Authenticatie    | Veilig inloggen         | Gebruikersbeheer via "NOVI-backend" met sessietokens.                        |
 | Adviezen         | Gezondheidsadvies       | Minimaal 3 adviezen per stad (medicatie, activiteiten, preventie).           |
 | Delen            | Deel-functionaliteit    | Adviezen delen via e-mail, WhatsApp of klembord.                             |
-| Offline          | Gecachte data           | Werkt offline met gecachte gegevens.                                        |
+| Offline          | Gecachte data           | Werkt offline met gecachte gegevens.                                         |
 | Mobiel           | Responsief design       | Geschikt voor mobiel en desktop,voldoet aan "WCAG 2.1 AA"             |                
 
 
@@ -65,7 +65,7 @@ Samenvattend betreft het een geavanceerd en toegankelijk instrument dat gezondhe
 
 | Categorie        | Technologie          | Versie | Doel                         |
 |------------------|----------------------|--------|------------------------------|
-| Frontend         | React                | 18+    | "UI-framework"                 |
+| Frontend         | React                | 18+    | "UI-framework"               |
 | Styling          | Handgeschreven CSS   | —      | Aangepaste styling           |
 | State Management | Context API          | —      | Globale staatbeheer          |
 | Routing          | React Router         | 6+     | Navigatie                    |
@@ -74,22 +74,22 @@ Samenvattend betreft het een geavanceerd en toegankelijk instrument dat gezondhe
 
 ### b.Systeemvereisten
 
-| Type      | Vereiste                     | Details                                         |
-|-----------|------------------------------|-------------------------------------------------|
-| Software  | Node.js                      | v18.0.0 of hoger                                |
-| Software  | NPM                          | v9.0.0 of hoger                                 |
-| Software  | Git                          | Voor versiebeheer                               |
-| Software  | Browser                      | "Chrome 90+, Firefox 88+, Safari 14+, Edge 90+" |
-| Hardware  | RAM                          | Minimaal 4GB, aanbevolen 8GB                    |
-| Hardware  | Schijfruimte                 | Minimaal 500MB vrij                             |
-| Hardware  | Internet                     | Stabiele verbinding voor API-aanroepen          |
+| Type      | Vereiste                     | Details                                           |
+|-----------|------------------------------|---------------------------------------------------|
+| Software  | Node.js                      | v18.0.0 of hoger                                  |
+| Software  | NPM                          | v9.0.0 of hoger                                   |
+| Software  | Git                          | Voor versiebeheer                                 |
+| Software  | Browser                      | "_Chrome 90+, Firefox 88+, Safari 14+, Edge 90+_" |
+| Hardware  | RAM                          | Minimaal 4GB, aanbevolen 8GB                      |
+| Hardware  | Schijfruimte                 | Minimaal 500MB vrij                               |
+| Hardware  | Internet                     | Stabiele verbinding voor API-aanroepen            |
 
 ## D .Gebruikte API's
 
 ### a. Overzicht van API's
 | Service      | Functie                   | Basis-URL                              | Authenticatie                  |
 |--------------|---------------------------|----------------------------------------|--------------------------------|
-| OpenWeather  | Weer & UV-index           | Geconfigureerd in `.env` (bijv. OpenWeather endpoint) | API-sleutel in URL            |
+| OpenWeather  | Weer & UV-index           | Geconfigureerd in `.env` (bijv. OpenWeather endpoint) | API-sleutel in URL|
 | Ambee        | Pollen & luchtkwaliteit   | Geconfigureerd in `.env` (bijv. Ambee endpoint, via proxy) | x-api-key                     |
 | NOVI Backend | Gebruikersbeheer          | Geconfigureerd in `.env` (bijv. NOVI endpoint) | X-Api-Key (auth), Bearer-token |
 
