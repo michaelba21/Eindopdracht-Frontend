@@ -59,7 +59,30 @@ const CityAdvice = () => {
           }
         }
 
-     
+        // Check for severe weather conditions
+        const hasSevereWeather =
+          weatherInfo.wind.speed > 15 || // High winds
+          weatherInfo.weather[0].main.toLowerCase().includes("storm") || 
+          weatherInfo.weather[0].main.toLowerCase().includes("thunder"); 
+
+        // Update state with all collected data
+        setLocationInfo({
+          name: cityId,
+          weather: weatherInfo,
+          pollen: pollenLevels,
+          uvIndex: uvValue,
+          airQuality: airStatus,
+        });
+
+        // Generate personalized advice based on all data
+        const adviceContent = generateAdvice(
+          weatherInfo,
+          pollenLevels,
+          preferences,
+          hasSevereWeather,
+          uvValue,
+          airStatus
+        );
         setTips(adviceContent);
       } catch (err) {
         console.warn("Data retrieval issue:", err);
@@ -415,7 +438,7 @@ function shadeAQI(aqi) {
   return "#b71c1c";///this color indicates Hazardous air quality index
 }
 
-/**
+/***
  * Returns a CSS class for UV index color coding
  * @param {number} uv 
  * @returns {string}

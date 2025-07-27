@@ -308,3 +308,4 @@ const getPollenLevel = (value) => {
 };
 
 export default EnvironmentalDashboard;
+
