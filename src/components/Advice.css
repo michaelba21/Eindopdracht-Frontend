@@ -83,6 +83,18 @@
   transform: translateY(-3px);     
 }
 
+.weather-icon {
+  width: 80px;                     
+  height: 80px;
+  margin-right: 1.5rem;           
+  flex-shrink: 0;                
+}
+
+.weather-info h3 {
+  color: var(--color-text);
+  margin: 0 0 0.4rem 0;          
+  font-size: 1.24rem;             
+}
 
 .weather-temp {
   font-size: 1.5rem;        /* Large text for temperature and "1rem=16px" */
@@ -522,6 +534,6 @@
   .pollen-overview:focus,
   .pollen-level:focus,
   .air-quality:focus {
-    outline: 2px solid currentColor; /* this assist the System focus color */
+    outline: 2px solid currentColor; /** this assist the System focus color */
   }
 }
