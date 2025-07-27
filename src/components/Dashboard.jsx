@@ -85,19 +85,6 @@ const EnvironmentalDashboard = () => {
     return <APILoadingScreen message="Milieugegevens laden..." />; // "Loading environmental data..."
   }
 
-  return (
-    <div className="environmental-dashboard">
-      <h2>Welkom</h2> 
-
-      {/* Error display with retry option */}
-      {errorMessage && (
-        <div className="error-alert">
-          {errorMessage}
-          <button onClick={retryFetch} className="retry-btn">
-            Opnieuw proberen
-          </button>
-        </div>
-      )}
 
       <div className="dashboard-content">
         {/* Main data card containing weather and environmental info */}
@@ -234,7 +221,7 @@ const EnvironmentalDashboard = () => {
           )}
         </div>
 
-        {/* Quick actions card in dashoard*/}
+        {/* Quick actions card in dashoard***/}
         <div className="actions-card">
           <h3>Snelle acties</h3>
           <div className="action-buttons">
