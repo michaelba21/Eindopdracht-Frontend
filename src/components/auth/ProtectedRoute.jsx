@@ -45,7 +45,7 @@ const SecureRoute = ({ children }) => {
     );
   }
 
-  /**
+  /***
    Protected Content Render and Only reached when:Auth verification is complete (!isChecking) and it Returns whatever components/elements were passed as children
    */
   return children;
