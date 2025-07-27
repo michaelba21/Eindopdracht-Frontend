@@ -30,16 +30,7 @@
   font-size: 20px;
 }
 
-.error-dismiss {
-  background: none;
-  border: none;
-  color: var(--color-error);
-  font-size: 20px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
+
 .error-dismiss:hover {
   background-color: var(--color-secondary-light); /* Hover background */
 }

@@ -21,22 +21,6 @@ const CitySelection = () => {
   const { isAuthenticated, createDemoUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // Component state management
-  const [chosenCities, setChosenCities] = useState([]); // Currently selected cities
-  const [query, setQuery] = useState(""); 
-  const [saving, setSaving] = useState(false); // Loading state for form submission
-  const [csvImporting, setCsvImporting] = useState(false); // Loading state for CSV import
-  const [csvError, setCsvError] = useState("");
-  const [csvSuccess, setCsvSuccess] = useState("");
-
-  // I have applied here a useEffect to create demo user if not authenticated
-  useEffect(() => {
-    if (!isAuthenticated) {
-      const user = createDemoUser();
-      if (user) console.log("Demo user created.");
-    }
-  }, [isAuthenticated, createDemoUser]);
-
   // Effect to initialize selected cities from preferences
   useEffect(() => {
     if (!isLoadingPrefs && preferences) {

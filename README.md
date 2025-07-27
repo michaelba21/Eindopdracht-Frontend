@@ -38,9 +38,13 @@
 
 ## A. Over deze app
 
-Hooikoorts Stadwijzer is een eigentijdse webapplicatie die inwoners van Friesland ondersteunt bij het identificeren van de meest geschikte stad voor personen met hooikoorts. Hierdoor zijn gebruikers in staat om op basis van de beschikbare informatie te bepalen op welke locaties zij waarschijnlijk de minste hinder van hun allergie zullen ondervinden. De app is geschikt om gebruikers relevante en persoonlijke informatie te genereren op de grond van gezondheid en woonomgeving. Op grond van API's recente data over onder andere het weer, pollen, UV-straling en luchtkwaliteit worden deze data slim gekoppeld aan individuele voorkeuren, zodat elke gebruiker een goede inzichten die hij of zij belangrijk vindt, ontvangt.  Zo krijg je een persoonlijk advies en zie je direct welke stad het meest geschikt is voor jouw situatie.
-Hooikoorts Stadwijzer vergelijkt Friese steden op basis van actuele data. Denk aan temperatuur, pollenconcentratie, luchtkwaliteit en UV-straling. De app berekent een score per stad, helemaal afgestemd op de gebruikers voorkeuren. Zo kunnen gebruikers bepalen waar ze het minste last van hooikoorts hebben.
-Binnen de applicatie kunnen gebruikers eenvoudig een account aanmaken. Na het inloggen wordt een unieke toegangs-token lokaal opgeslagen op het apparaat. Dit zorgt ervoor dat de gegevens goed beveiligd zijn en gebruikers vlot toegang houden tot hun profiel, zonder in te leveren op privacy of gebruiksgemak. De interface is modern en intuïtief opgebouwd door middel van React.  Stel je voor: overzichtelijke grafieken, geavanceerde filters en zorgvuldig samengestelde ranglijsten die gezamenlijk zorgen voor een soepele en prettige gebruikerservaring. Alles heeft het doel om informatie snel vindbaar en doorzichtig te maken. De applicatie werkt ook offline dankzij gecachte gegevens en is volledig toegankelijk volgens de "WCAG 2.1 AA-richtlijnen". Gebruikers kunnen voorkeuren instellen met prioriteiten (schaal 1-5) en krijgen minimaal 3 gepersonaliseerde adviezen per stad.
+Hooikoorts Stadwijzer is een moderne webapplicatie die inwoners van Friesland helpt om te ontdekken in welke steden ze het minste last van hooikoorts zullen hebben. De app gebruikt actuele informatie over o.a. pollen, lucht en zonkracht, en vertaalt dit – op basis van jouw voorkeuren – naar een advies dat echt bij jou past.
+
+De app berekent voor elke stad een score, afgestemd op wat jij belangrijk vindt. Zo zie je in één oogopslag waar jij je waarschijnlijk het prettigst voelt. Gebruikers kunnen eenvoudig voorkeuren instellen (zoals gevoeligheid voor pollen of smog), en ontvangen gepersonaliseerde tips per stad — minstens drie per locatie.
+
+Naast een veilige login met lokaal opgeslagen toegangstokens, biedt de app een moderne interface gebouwd met React. Grafieken, filters en duidelijke ranglijsten maken de ervaring overzichtelijk en prettig. Ook offline blijft de app bruikbaar dankzij slimme caching. De volledige applicatie is ontwikkeld met toegankelijkheid als uitgangspunt en voldoet volledig aan de "WCAG 2.1 AA-richtlijnen".
+
+Samenvattend betreft het een geavanceerd en toegankelijk instrument dat gezondheid en omgevingsfactoren integreert. De applicatie is specifiek afgestemd op de behoeften van hooikoortspatiënten in Friesland.
 ## B. Belangrijke Functionaliteiten
 | Categorie        | Functionaliteit         | Beschrijving                                                                 |
 |------------------|-------------------------|------------------------------------------------------------------------------|
@@ -48,11 +52,11 @@ Binnen de applicatie kunnen gebruikers eenvoudig een account aanmaken. Na het in
 | Data-integratie  | Real-time data          | Integreert weer-, pollen-, luchtkwaliteit- en UV-indexdata.                  |
 | Personalisatie   | Persoonlijke score      | Scores afgestemd op gebruikersvoorkeuren (bijv. lage pollen, temperatuur).   |
 | Interface        | Gebruiksvriendelijk     | Moderne React UI met filters, grafieken en ranglijsten.                      |
-| Authenticatie    | Veilig inloggen         | Gebruikersbeheer via NOVI-backend met sessietokens.                         |
+| Authenticatie    | Veilig inloggen         | Gebruikersbeheer via "NOVI-backend" met sessietokens.                        |
 | Adviezen         | Gezondheidsadvies       | Minimaal 3 adviezen per stad (medicatie, activiteiten, preventie).           |
-| Delen            | Deel-functionaliteit    | Adviezen delen via e-mail, WhatsApp of klembord.                            |
+| Delen            | Deel-functionaliteit    | Adviezen delen via e-mail, WhatsApp of klembord.                             |
 | Offline          | Gecachte data           | Werkt offline met gecachte gegevens.                                        |
-| Mobiel           | Responsief design       | Geschikt voor mobiel en desktop, voldoet aan WCAG 2.1 AA.             |                
+| Mobiel           | Responsief design       | Geschikt voor mobiel en desktop,voldoet aan "WCAG 2.1 AA"             |                
 
 
 ## C. Technische specificaties & vereisten
@@ -61,7 +65,7 @@ Binnen de applicatie kunnen gebruikers eenvoudig een account aanmaken. Na het in
 
 | Categorie        | Technologie          | Versie | Doel                         |
 |------------------|----------------------|--------|------------------------------|
-| Frontend         | React                | 18+    | UI-framework                 |
+| Frontend         | React                | 18+    | "UI-framework"                 |
 | Styling          | Handgeschreven CSS   | —      | Aangepaste styling           |
 | State Management | Context API          | —      | Globale staatbeheer          |
 | Routing          | React Router         | 6+     | Navigatie                    |
@@ -74,7 +78,7 @@ Binnen de applicatie kunnen gebruikers eenvoudig een account aanmaken. Na het in
 |-----------|------------------------------|-------------------------------------------------|
 | Software  | Node.js                      | v18.0.0 of hoger                                |
 | Software  | NPM                          | v9.0.0 of hoger                                 |
-| Software  | Git                          | Voor versiebeheer                                 |
+| Software  | Git                          | Voor versiebeheer                               |
 | Software  | Browser                      | "Chrome 90+, Firefox 88+, Safari 14+, Edge 90+" |
 | Hardware  | RAM                          | Minimaal 4GB, aanbevolen 8GB                    |
 | Hardware  | Schijfruimte                 | Minimaal 500MB vrij                             |
@@ -97,9 +101,9 @@ Binnen de applicatie kunnen gebruikers eenvoudig een account aanmaken. Na het in
 | NOVI Backend | Vraag de sleutel aan via de NOVI-omgeving   | Gebruikersauthenticatie     |
 
 **Opmerking**: De exacte API-URLs moeten worden ingesteld in de .env-bestanden. De gebruiker stelt deze zelf in. Volg deze stappen:
-•	Voor OpenWeather: Maak een account aan bij de OpenWeather-service. Vervolgens ontvang je een officiële URL en een API-sleutel; deze zijn noodzakelijk voor toegang tot de dienst. Sla beide gegevens zorgvuldig op.
+•	Voor OpenWeather geldt dat u eerst een account moet aanmaken bij de OpenWeather-service voordat u verder kunt gaan.Vervolgens ontvang je een officiële URL en een API-sleutel; deze zijn noodzakelijk voor toegang tot de dienst. Sla beide gegevens zorgvuldig op.
 •	Voor Ambee: Registreer een account bij de Ambee-service en verkrijg de officiële URL en API-sleutel.
-•	Voor NOVI Backend: Vraag de officiële URL en API-sleutel aan via de NOVI-omgeving of je instructeur. Het is essentieel dat deze gegevens, inclusief de API-sleutel, veilig worden toegevoegd aan de .env-bestanden.
+•	Voor NOVI Backend:Vraag de officiële API-URL en bijbehorende sleutel op via de NOVI-omgeving of rechtstreeks bij je instructeur. Bewaar deze altijd veilig in een .env-bestand, zodat gevoelige informatie niet per ongeluk in je repository of gedeelde code terechtkomt.
 
 
 ## E. Authenticatie en beveiliging
@@ -149,7 +153,7 @@ const requestHeaders = {
 
 - Beveiligingsrichtlijnen
 
-A. Je gevoelige informatie zoals API’s key in .env plaatsen en niet naar gitHub meesturen 
+A. Daarnaast is het handig om belangrijke informatie, zoals API-keys, op te slaan in een gitignore en .env-bestand. 
 B. Gebruik sterke, unieke API keys
 C. Roteer keys regelmatig
 D. Controleer `.gitignore` voor correcte excludes
@@ -166,7 +170,7 @@ D. Controleer `.gitignore` voor correcte excludes
 | '/api/metrics/ui-support'   | Update support metrics     | Performance tracking               |
 
 
-- Een proxy-endpoint is een specifiek adres op een tussenliggende server dat inkomende verzoeken opvangt en deze namens de gebruiker doorstuurt naar een doelserver. Dit wordt vaak ingezet om technische beperkingen te omzeilen of om communicatie veiliger te laten verlopen.
+- A proxy-endpoint werkt altijd als een tussenstap op een server: in principe, het krijgt  inkomende request en stuurt deze vervolgens ,namens de gebruiker, door naar een andere doelserver. Dit mechanisme wordt vaak ingezet om technische beperkingen te omzeilen of om een extra laag beveiliging toe te voegen aan de communicatie.
 
 ## G. Externe API-integratie
 
@@ -336,14 +340,14 @@ async function loginUser(username, password) {
 
 | Stap | Actie                      | Commando                                                              |
 |------|----------------------------|-----------------------------------------------------------------------|
-| 1    | Repository klonen          | `git clone https://github.com/michaelba21/hooikoorts-stadwijzer.git`  |
+| 1    | Repository klonen          | `git clone "https://github.com/michaelba21/hooikoorts-stadwijzer.git"`|
 | 2    | Navigeer naar map          | `cd hooikoorts-stadwijzer`                                            |
 | 3    | Dependencies installeren   | `npm install`                                                         |
-| 4    | Verificeer installatie     | `npm list --depth=0` (Controleer de dependencies)                     |
+| 4    | Verificeer installatie     | "`npm list --depth=0` (Controleer de dependencies)"                     |
 | 5    | .env-bestanden aanmaken    | Zie voorbeelden hieronder                                             |
 | 6    | Proxy server starten       | `npm run start:proxy`                                                 |
 | 7    | Frontend starten           | `npm run dev`                                                         |
-| 8    | Test installatie           |Open http://localhost:5173 in een browser                              |
+| 8    | Test installatie           |"Open "http://localhost:5173" in een browser"                            |
 
 ### b. Environment configuratie
 
@@ -367,19 +371,19 @@ Server directory (.env in /server):
 
 ### c. Opstartopties
 
-- Frontend only: `npm run dev` (gebruikt externe APIs) 
+- "Frontend only: `npm run dev` (gebruikt externe APIs)" 
 - With proxy server:`npm run start:proxy` + `npm run dev` (aanbevolen voor Ambee API) 
-- Production: `npm run build && npm run preview` 
+- "Production: `npm run build && npm run preview`" 
 
 ### d. Beschikbare Scripts
 
  | Script                 | Beschrijving                         |
 |------------------------|--------------------------------------|
 | `npm run dev`          | Start de ontwikkelingsserver (Vite)       |
-| `npm run build`        | bouw voor productie                 |
-| `npm run preview`      | bekijk productie build              |
+| `npm run build`        | "bouw voor productie"                 |
+| `npm run preview`      | "bekijk productie build"              |
 | `npm run start:proxy`  | Start proxy server voor API calls    |
-| `npm run lint`         | Voer ESLint-codecontrole uit             |
+| `npm run lint`         | "Voer ESLint-codecontrole uit"             |
 
 
 
@@ -534,7 +538,6 @@ function ThemeButton() {
 
 ---javascript  format
 
-// Gebaseerd op de werkelijke implementatie in utils/scoreCalculator.jsx
 
 export const calculateCityScore = (cityData, preferences) => {
 
@@ -602,11 +605,11 @@ export const calculateCityScore = (cityData, preferences) => {
 
 | Code | Betekenis              | Actie                            | Oplossing                                                   |
 |------|------------------------|----------------------------------|-------------------------------------------------------------|
-| 200  | OK                     | data wordt succesvol verwerkt.   | —                                                           |
+| 200  | OK                     | "data wordt succesvol verwerkt"  | —                                                          |
 | 400  | Ongeldig verzoek       | Controleer input                 | Valideer parameters                                         |
 | 401  | Niet geautoriseerd     | Log opnieuw in                   | Hernieuw token.                                             |
 | 404  | Niet gevonden          | Schakel over naar fallbackdata   | gebruik  gegevens uit de cache of gesimuleerde (mock) data. |
-| 429  | Te veel requests       | Wacht, gebruik cache             | Rate limiting                                               |
+| 429  | Te veel requests       | Wacht, gebruik cache             | "Rate limiting"                                             |
 | 500  | Serverfout             | Probeer later opnieuw            | Fallback/retry                                              |
 
 - Voorbeeld error responses:
@@ -647,7 +650,7 @@ export class ErrorHandler {
       return { type: 'OFFLINE', message: 'Geen internetverbinding', action: 'retry' };
 
     }
-    if (error.status === 429) {
+    if ("error.status === 429") {
 
       return { type: 'RATE_LIMIT', message: 'Te veel verzoeken', action: 'wait' };
 
@@ -681,7 +684,7 @@ const CACHE_CONFIG = {
 
 
 - 1- 1u betekent 1 uur
-- 2- TTL betekent Time To Live (hoe lang iets geldig blijft in de cache).
+- 2- TTL staat voor Time To Live, oftewel de periode waarin data geldig blijft binnen de cache voordat deze wordt verwijderd.
 
 | Service        | Limiet                                   | Overschrijding | Oplossing                                      |
 |----------------|-------------------------------------------|----------------|------------------------------------------------|

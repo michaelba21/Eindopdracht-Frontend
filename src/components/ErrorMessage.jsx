@@ -6,16 +6,6 @@ const ErrorMessage = ({ message, onDismiss }) => {
   // State to control visibility of the error message 
   const [isVisible, setIsVisible] = useState(true);
 
-  // Effect for auto-dismiss functionality  and it dismiss the message after 5 seconds
-  useEffect(() => { 
-    const timer = setTimeout(() => {
-      setIsVisible(false); 
-      if (onDismiss) onDismiss(); 
-    }, 5000); // 5000 milliseconds = 5 seconds. 
-
-    // I utilized below code for Clean up function in order to clear the timer if component unmounts
-    return () => clearTimeout(timer);
-  }, [onDismiss]); // Dependency array ensures effect runs when onDismiss changes
 
   
   if (!isVisible) return null;

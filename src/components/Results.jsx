@@ -267,14 +267,7 @@ function pollenClass(level) {
   return classes[level?.toLowerCase()] || "pollen-low";///Add fallback to return "pollen-low" when pollen level is undefined or unrecognized.
 }
 
-// Determine CSS class for UV index level
-function uvClass(index) {
-  if (index < 3) return "uv-low";
-  if (index < 6) return "uv-moderate";
-  if (index < 8) return "uv-high";
-  if (index < 11) return "uv-very-high";
-  return "uv-extreme";
-}
+
 
 // Determine CSS class for air quality index
 function aqiClass(aqi) {
