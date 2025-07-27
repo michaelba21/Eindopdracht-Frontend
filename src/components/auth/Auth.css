@@ -123,5 +123,6 @@
 @media (max-width: 480px) {
   .auth-card {
     padding: 1.5rem;/* This will helps a tighter padding on small screens */
+
   }
 }
