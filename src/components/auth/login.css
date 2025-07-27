@@ -424,3 +424,13 @@
   pointer-events: none;      /* I applied this character here to disable user input and show loading state with faded appearance */
   opacity: 0.8;                              
 }
+
+/* This will Enhances the button states */
+.form-button:focus {
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.form-button:active {
+  transform: translateY(1px);                /* this shows a press effect when you click button*/
+  box-shadow: 0 5px 15px rgba(102, 125, 233, 0.2);
+}
