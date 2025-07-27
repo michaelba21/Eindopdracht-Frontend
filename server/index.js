@@ -1,5 +1,5 @@
 
- 
+//source info:"https://stackoverflow.com/questions/64620877/cant-use-dotenv-with-es6-modules"  and "https://stackoverflow.com/questions/71473345/whats-the-difference-between-nodeprocess-and-process" 
 // here you see Simple proxy server version for Ambee API with debug logging
 // Core dependencies:
 import express from 'express';          
@@ -38,11 +38,11 @@ app.get('/health', (req, res) => {/////I used health here for status checks and 
     }),
     memory: {                          // Memory usage breakdown
       rss: `${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB`, // Resident Set Size (physical memory used) and MB stands for Megabyte. 1 KB = 1024 bytes 
-      heapUsed: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`, // JS heap used
+      heapUsed: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`, // JS heap used. source info:"https://arunangshudas.medium.com/how-do-you-handle-memory-leaks-in-a-node-js-application-ba20b1672ff1"
       heapTotal: `${(memoryUsage.heapTotal / 1024 / 1024).toFixed(2)} MB` // Total heap size
     },
-    system: {// OS-level is metrics and it Returns an array with 3 values representing the system's CPU load and it helps detect if your server is overloaded (e.g. sustained high values that need to scale up).  
-      load: os.loadavg(),              // CPU load averages (1, 5, 15 minutes). 
+    system: {                          // OS-level is metrics and it Returns an array with 3 values representing the system's CPU load and it helps detect if your server is overloaded (e.g. sustained high values that need to scale up).  
+      load: os.loadavg(),              // CPU load averages (1, 5, 15 minutes). source info:"https://nodejs.org/api/os.html"
       uptime: os.uptime()             // System uptime in seconds
     },
     metrics: {                       
@@ -69,7 +69,7 @@ app.use((req, res, next) => {
       errorCount++;
     }
     
-    // This will Calculate the response duration. 
+    // This will Calculate the response duration. source info:"https://desku.io/blogs/average-response-time-calculation-to-reduce-it"
     const duration = Date.now() - start;
     console.log(`${req.method} ${req.originalUrl} - ${res.statusCode} (${duration}ms)`);///source info:"https://gist.github.com/sochix/831990a5f513bb74e677cc0c4958c5b8"
   });
@@ -134,7 +134,7 @@ app.use('/proxy', async (req, res) => {// API Proxy endpoint - forwards requests
 
     //This will send a request to Ambee API using same HTTP method and required headers
     const response = await fetch(ambeeUrl, {
-      method: req.method,              // Preserve original HTTP method. 
+      method: req.method,              // Preserve original HTTP method. source info:"https://stackoverflow.com/questions/11168115/express-js-get-http-method-in-controller"  and "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/OPTIONS" 
       headers: {
         'x-api-key': AMBEE_API_KEY,   
         'Content-Type': 'application/json',
@@ -143,9 +143,9 @@ app.use('/proxy', async (req, res) => {// API Proxy endpoint - forwards requests
 
     //// I have pointed out a check up for failed API response; log error details and forward status with message to client
     if (!response.ok) {
-      const errorText = await response.text();
+      const errorText = await response.text();////source info:"https://github.com/continuedev/continue/issues/3202"
       console.error('Ambee API error:', response.status, errorText);
-      return res.status(response.status).json({ error: `API error: ${response.status} ${errorText}` });
+      return res.status(response.status).json({ error: `API error: ${response.status} ${errorText}` });///source info:"https://stackoverflow.com/questions/63065237/how-am-i-meant-to-see-the-errors-in-this-response-return-res-status400-json"
     }
 
     // I have applied this because it ensures API responded with JSON; if not, log and return 500 error
@@ -177,8 +177,8 @@ app.get('/health', (req, res) => {
     status: 'healthy',
     uptime: `${(uptime / 1000).toFixed(0)} seconds`,
     memory: {
-      rss: `${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB`,
-      heapUsed: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`,
+      rss: `${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB`,////source info:"https://medium.com/%40arunangshudas/7-tips-for-reducing-memory-consumption-in-node-js-bd376c3456a9"
+      heapUsed: `${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`,////source info:"https://arunangshudas.medium.com/how-do-you-handle-memory-leaks-in-a-node-js-application-ba20b1672ff1"
       heapTotal: `${(memoryUsage.heapTotal / 1024 / 1024).toFixed(2)} MB`
     },
     system: {
@@ -190,9 +190,9 @@ app.get('/health', (req, res) => {
       successfulRequests,
       errorCount,
       successRate: totalRequests > 0 ? 
-        ((successfulRequests / totalRequests) * 100).toFixed(2) + '%' : 'N/A',
+        ((successfulRequests / totalRequests) * 100).toFixed(2) + '%' : 'N/A',///source info:"https://gist.github.com/dfkaye/e977af36e668aa134c0ce55bab5bb15f"
       errorRate: totalRequests > 0 ?
-        ((errorCount / totalRequests) * 100).toFixed(2) + '%' : 'N/A',
+        ((errorCount / totalRequests) * 100).toFixed(2) + '%' : 'N/A',///source info:"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed"
       uiMetrics: {
         totalInteractions: uiMetrics.totalInteractions,
         successfulInteractions: uiMetrics.successfulInteractions,
@@ -228,7 +228,7 @@ app.listen(PORT, () => {
   setInterval(() => {
     const uptime = Date.now() - startTime;
     const successRate = totalRequests > 0 ? 
-      ((successfulRequests / totalRequests) * 100).toFixed(2) : 0;
+      ((successfulRequests / totalRequests) * 100).toFixed(2) : 0;////source info:"https://stackoverflow.com/questions/4937251/why-is-my-tofixed-function-not-working"
     const errorRate = calculateErrorRate();
     
     // here I have shown the Log server statistics
@@ -237,5 +237,5 @@ app.listen(PORT, () => {
     console.log(`Errors: ${errorCount} (${errorRate.toFixed(2)}% error rate)`);
     
     checkErrorRate();                  // Perform error rate check
-  }, 5 * 60 * 1000);                  // 5 minute interval. 
+  }, 5 * 60 * 1000);                  // 5 minute interval. source info:"https://github.com/Azure-Samples/AzureMapsCodeSamples/issues/139"
 }); 
