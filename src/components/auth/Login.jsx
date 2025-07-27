@@ -189,7 +189,7 @@ const SignIn = () => {
           </button>
         </form>
         
-        {/* I have generated here a Link to registration page */}
+        {/* I have generated here a Link to registration page **/}
         <div className="register-link">
           <p>
             Nog geen account? <Link to="/register">Registreer hier</Link>

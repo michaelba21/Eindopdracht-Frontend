@@ -9,7 +9,16 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+.register-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .register-card h1 {
   color: #333;
@@ -258,7 +267,7 @@
   outline-offset: 2px;
 }
 
-/* Animation for form appearance */
+/* Animation for form appearance **/
 .register-card {
   animation: slideUp 0.6s ease-out;
 }
