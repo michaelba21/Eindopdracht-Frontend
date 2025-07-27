@@ -30,7 +30,16 @@
   font-size: 20px;
 }
 
-
+.error-dismiss {
+  background: none;
+  border: none;
+  color: var(--color-error);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
 .error-dismiss:hover {
   background-color: var(--color-secondary-light); /* Hover background */
 }
@@ -57,5 +66,5 @@
 
 /* Fade out when dismissing */
 .error-message.dismissing {
-  animation: fadeOut 0.3s ease-out forwards; /* Play fade out in 3 second */
+  animation: fadeOut 0.3s ease-out forwards; /* Play fade out in 3 second **/
 }
