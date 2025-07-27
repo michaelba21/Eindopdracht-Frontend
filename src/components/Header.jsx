@@ -8,7 +8,11 @@ const Header = () => {
   const { isAuthenticated, logout } = useContext(AuthContext);
   const navigate = useNavigate(); // Here I made a hook for programmatic navigation
 
- 
+  // Handle logout action
+  const handleLogout = () => {
+    logout(); // Call logout function from context.
+    navigate("/login"); // I have applied here a redirect to login page after logout
+  };
 
   return (
     <header className="header">
@@ -86,7 +90,7 @@ const Header = () => {
                 Inloggen
               </NavLink>
 
-              {/* Register link */}
+              {/* Register link **/}
               <NavLink
                 to="/register"
                 className={({ isActive }) => `nav-link ${isActive && "active"}`}
