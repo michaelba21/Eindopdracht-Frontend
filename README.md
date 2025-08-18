@@ -340,8 +340,8 @@ async function loginUser(username, password) {
 
 | Stap | Actie                      | Commando                                                              |
 |------|----------------------------|-----------------------------------------------------------------------|
-| 1    | Repository klonen          | `git clone "https://github.com/michaelba21/hooikoorts-stadwijzer.git"`|
-| 2    | Navigeer naar map          | `cd hooikoorts-stadwijzer`                                            |
+| 1    | Repository klonen          | `git clone "https://github.com/michaelba21/Eindopdracht-Frontend"`|
+| 2    | Navigeer naar map          | `cd Eindopdracht-Frontend`                                            |
 | 3    | Dependencies installeren   | `npm install`                                                         |
 | 4    | Verificeer installatie     | "`npm list --depth=0` (Controleer de dependencies)"                     |
 | 5    | .env-bestanden aanmaken    | Zie voorbeelden hieronder                                             |
